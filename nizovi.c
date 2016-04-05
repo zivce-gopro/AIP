@@ -206,7 +206,7 @@ void zad8 () {
 	for (j=0;j<m;j++){
 		printf("element e\n");
 		scanf("%d",&e);
-
+		
 		for (i=0;i<n;i++)
 			if (e == a[i])
 				p=1; // ako postoji nista se ne radi 
@@ -214,7 +214,7 @@ void zad8 () {
 		if (p==0) {
 			for (i=0;i<n;i++){
 				if ( e<a[i] ){//prosiri niz i ubaci sta treba
-				
+					n++;//mora zbog ispisa
 					for (k=n ;k>i+1 ;k--) //pomeram udesno
 						a[k]=a[k-1];
 					a[i+1]=e;
