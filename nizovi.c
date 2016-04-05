@@ -234,7 +234,7 @@ void zad8 () {
 
 }
 void zad9 () {
-	int i,n,a[20],k,e,m,j;
+	int i,n,a[20],k,e,m,r,j;
 	printf("duzina niza A?\n");
 	scanf("%d",&n);
 	printf("uneti niz u jednoj liniji\n");
@@ -242,7 +242,7 @@ void zad9 () {
 	printf("Uneti broj elemenata\n");
 	scanf("%d",&m);
 
-	for (i=0;i<=m;i++){
+	for (r=0;r<=m;r++){
 		printf("Uneti indeks, element\n");
 		scanf("%d %d",&k,&e);
 		n++;
