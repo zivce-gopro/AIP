@@ -246,7 +246,7 @@ void zad9 () {
 		printf("Uneti indeks, element\n");
 		scanf("%d %d",&k,&e);
 		n++;
-		for (j=n;j>=k;j--)
+		for (j=n;j>k+1;j--)
 			a[j] = a[j-1];
 		a[k-1] = e;
 		for (i=0;i<n;i++) printf("%d ",a[i]);
