@@ -214,7 +214,7 @@ void zad8 () {
 		if (p==0) {
 			for (i=0;i<n;i++){
 				if ( e<a[i] ){//prosiri niz i ubaci sta treba
-					n++;
+				
 					for (k=n ;k>i+1 ;k--) //pomeram udesno
 						a[k]=a[k-1];
 					a[i+1]=e;
