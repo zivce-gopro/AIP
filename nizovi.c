@@ -233,7 +233,29 @@ void zad8 () {
 	}//m elemenata da se ubaci
 
 }
+void zad9 () {
+	int i,n,a[20],k,e,m,j;
+	printf("duzina niza A?\n");
+	scanf("%d",&n);
+	printf("uneti niz u jednoj liniji\n");
+	for (i=0;i<n;i++) scanf("%d",a+i);
+	printf("Uneti broj elemenata\n");
+	scanf("%d",&m);
 
+	for (i=0;i<=m;i++){
+		printf("Uneti indeks, element\n");
+		scanf("%d %d",&k,&e);
+		n++;
+		for (j=n;j>=k;j--)
+			a[j] = a[j-1];
+		a[k] = e;
+		for (i=0;i<n;i++) printf("%d ",a[i]);
+	
+	} // uneti m elemenata
+	
+	
+
+}
 void main(){
 	//zad1();
 	//zad6();
@@ -242,5 +264,6 @@ void main(){
 	//zad4();
 	//zad5();
 	//zad7();
-	zad8();
+	//zad8();
+	zad9();
 }
