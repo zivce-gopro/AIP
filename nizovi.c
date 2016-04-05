@@ -196,7 +196,7 @@ void zad7 () {
 
 }
 void zad8 () {
-	int i,n,m,e,j,p=0,a[30];
+	int i,n,m,e,j,p=0,k,a[30];
 	printf("duzina niza A?\n");
 	scanf("%d",&n);
 	printf("uneti niz u jednoj liniji\n");
@@ -213,14 +213,14 @@ void zad8 () {
 		
 		if (p==0) {
 			for (i=0;i<n;i++){
-				if ( e>a[i] ){//prosiri niz i ubaci sta treba
+				if ( e<a[i] ){//prosiri niz i ubaci sta treba
 					n++;
-					for (k=n ;k>i ;k--) //pomeram udesno
+					for (k=n ;k>i+1 ;k--) //pomeram udesno
 						a[k]=a[k-1];
-					a[i]=e;
+					a[i+1]=e;
 					
 				}
-				printf("%d",a[i]);
+				printf("%d ",a[i]);
 			
 			}
 		
