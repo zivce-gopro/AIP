@@ -213,7 +213,7 @@ void zad8 () {
 		
 		if (p==0) {
 			for (i=0;i<n;i++){
-				if ( e<a[i] ){//prosiri niz i ubaci sta treba
+				if ( e<a[i] && e>a[i-1]){//prosiri niz i ubaci sta treba
 					n++;//mora zbog ispisa
 					for (k=n ;k>i+1 ;k--) //pomeram udesno
 						a[k]=a[k-1];
