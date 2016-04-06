@@ -279,7 +279,8 @@ void zad10(){
 		printf("niz nakon brisanja %d elemenata\n",k);
 		for (i=0;i<n;i++)
 			printf("%d ",a[i]);
-
+		
+		printf("\n");
 
 
 	}//m puta brisemo
