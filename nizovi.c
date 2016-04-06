@@ -257,7 +257,31 @@ void zad9 () {
 
 }
 void zad10(){
+	int n,k,i,j,p,a[30],m;
+	printf("duzina niza A?\n");
+	scanf("%d",&n);
+	printf("uneti niz u jednoj liniji\n");
+	for (i=0;i<n;i++) scanf("%d",a+i);
 	
+	printf("koliko elemenata brisemo?\n");
+	scanf("%d",&m);
+	for (i=0;i<m;i++){
+		printf("indeks elemenata kog brisemo?\n");
+		scanf("%d",&k);
+
+		for (j=k-1;j<n;j++)
+			a[j]=a[j+1];
+		n--;
+		
+		printf("\n");
+		
+		printf("niz nakon brisanja %d elemenata\n",k);
+		for (i=0;i<n;i++)
+			printf("%d ",a[i]);
+
+
+
+	}//m puta brisemo
 
 }
 void main(){
