@@ -256,6 +256,10 @@ void zad9 () {
 	
 
 }
+void zad10(){
+	
+
+}
 void main(){
 	//zad1();
 	//zad6();
@@ -265,5 +269,6 @@ void main(){
 	//zad5();
 	//zad7();
 	//zad8();
-	zad9();
+	//zad9();
+	zad10();
 }
