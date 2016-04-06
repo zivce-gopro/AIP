@@ -265,7 +265,8 @@ void zad10(){
 	
 	printf("koliko elemenata brisemo?\n");
 	scanf("%d",&m);
-	for (i=0;i<m;i++){
+	for (p=0;p<m;p++){
+
 		printf("indeks elemenata kog brisemo?\n");
 		scanf("%d",&k);
 
