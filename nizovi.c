@@ -287,6 +287,7 @@ void zad10(){
 
 }
 void main(){
+	
 	//zad1();
 	//zad6();
 	//zad2();
@@ -296,5 +297,5 @@ void main(){
 	//zad7();
 	//zad8();
 	//zad9();
-	zad10();
+	//zad10();
 }
