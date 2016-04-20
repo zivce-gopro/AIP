@@ -317,21 +317,21 @@ void zad311 () {
 	printf("Unesi broj k\n");
 	scanf("%d",&k);
 	// radi ali nestrukturno isprogramirano! 
-	//r=0;
+	/*	r=0;
 
-	//for (i=r ; i<n ; i++) {
-		//while (a[r] != k && r<n)
+	for (i=r ; i<n ; i++) {
+		while (a[r] != k && r<n)
 
-			//r++;
-		//if (r==n) {
-		//break;}
-		//for (j=r; j<n-1 ; j++)
-		//	a[j] = a[j+1];
-		//n--;
-		//for (t=0;t<n;t++) 
-		//	printf("%d ", a[t]);
-		//printf("\n");
-
+			r++;
+		if (r==n) {
+		break;}
+		for (j=r; j<n-1 ; j++)
+			a[j] = a[j+1];
+		n--;
+		for (t=0;t<n;t++) 
+			printf("%d ", a[t]);
+		printf("\n");
+		*/
 	for (i=0;i<n;i++) {
 		if (a[i] == k) {
 			for (j=i;j<n-1;j++)
@@ -344,10 +344,23 @@ void zad311 () {
 	
 	}
 		}//3 zadatak - Kolokvijum I - 2011
+void zad110() {
+	int m=0,B=14,S=0;
+	while (m<100) {
+		if (B%7 == 0 && B%3 != 0 && B % 4 ==2){
+			printf("%d\t",B);
+			m++;
+			S+=B;B+=2;
+		}
+		else B+=2;
+	}
+	printf("Suma = %d", S);
 
+}// 1 zadatak - Kolokvijum I - 2010
 
 void main() {
-	zad311();
+	zad110();
+	//zad311();
 	//zad111();
 	//zad312();
 	//zad212();
