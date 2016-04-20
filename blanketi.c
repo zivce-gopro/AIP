@@ -306,10 +306,49 @@ void zad111 () {
 
 }//1 zadatak - Kolokvijum I - 2011
 
+void zad311 () {
+	int n,i,a[30],k,r,j;
+	printf("Duzina niza?\n");
+	scanf("%d",&n);
+	for (i=0;i<n;i++) {
+		scanf("%d",&a[i]);
+	} 
+
+	printf("Unesi broj k\n");
+	scanf("%d",&k);
+	// radi ali nestrukturno isprogramirano! 
+	//r=0;
+
+	//for (i=r ; i<n ; i++) {
+		//while (a[r] != k && r<n)
+
+			//r++;
+		//if (r==n) {
+		//break;}
+		//for (j=r; j<n-1 ; j++)
+		//	a[j] = a[j+1];
+		//n--;
+		//for (t=0;t<n;t++) 
+		//	printf("%d ", a[t]);
+		//printf("\n");
+
+	for (i=0;i<n;i++) {
+		if (a[i] == k) {
+			for (j=i;j<n-1;j++)
+				a[j] = a[j+1];
+			n--;
+			for (r=0;r<n;r++)
+				printf("%d ",a[r]);
+		printf("\n");
+		}
+	
+	}
+		}//3 zadatak - Kolokvijum I - 2011
 
 
 void main() {
-	zad111();
+	zad311();
+	//zad111();
 	//zad312();
 	//zad212();
 	//zad112();
