@@ -305,7 +305,6 @@ void zad111 () {
 	}
 
 }//1 zadatak - Kolokvijum I - 2011
-
 void zad311 () {
 	int n,i,a[30],k,r,j;
 	printf("Duzina niza?\n");
@@ -344,6 +343,7 @@ void zad311 () {
 	
 	}
 		}//3 zadatak - Kolokvijum I - 2011
+
 void zad110() {
 	int m=0,B=14,S=0;
 	while (m<100) {
@@ -359,9 +359,34 @@ void zad110() {
 	printf("Suma = %d", S);
 
 }// 1 zadatak - Kolokvijum I - 2010
+void zad210 () {
+	int obA,obB,obC;
+	float x,y;
+	obA=1;
+	obB=1;
+	obC=1;
+
+	while (obA || obB || obC) {
+		printf("unesi tacku\n");
+		scanf("%f %f",&x,&y);
+		obA = (x-4)*(x-4) + (y-4) * (y-4) <=1;
+		
+		obB =(y>4-(2/3)*x) && ((x-4)*(x-4) + (y-4) * (y-4) <=16);
+	
+		obC =(y<4-(2/3)*x) && ((x-4)*(x-4) + (y-4) * (y-4) <=16);
+	
+		if (obA) printf("Oblast A\n");
+		else if (obB) printf("Oblast B\n");
+		else if (obC) printf("Oblast C\n");
+	
+	}
+
+}// 2 zadatak - Kolokvijum I - 2010
+
 
 void main() {
-	zad110();
+	zad210();
+	//zad110();
 	//zad311();
 	//zad111();
 	//zad312();
