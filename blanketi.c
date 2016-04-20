@@ -267,9 +267,28 @@ void zad212 () {
 
 
 }//2 zadatak - Kolokvijum I - 2012
+void zad312 () {
+	int n,i,a[30],p=1;
+	float avg,s=0;
+	printf("Duzina niza?\n");
+	scanf("%d",&n);
+	for (i=0;i<n;i++) {
+		scanf("%d",&a[i]);
+		s+=a[i];
+	} 
+	avg = s/n;
+	for (i=0;i<n;i++) 
+		if (a[i]>avg) {
+			p*=a[i];
+			
+	printf("Proizvod je = %d\n",p);
+		}
+	printf("%f\n",avg);
 
+}//2 zadatak - Kolokvijum I - 2012
 void main() {
-	zad212();
+	zad312();
+	//zad212();
 	//zad112();
 	//zad313();
 	//zad213();
