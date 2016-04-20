@@ -285,9 +285,32 @@ void zad312 () {
 		}
 	printf("%f\n",avg);
 
-}//2 zadatak - Kolokvijum I - 2012
+}//3 zadatak - Kolokvijum I - 2012
+
+void zad111 () {
+	int x,i,m,n,tmp;
+	printf("Uneti broj x\n");
+	scanf("%d",&x);
+	for (i=2;i<101;i++) {
+		m=x;n=i;
+
+		while ( m % n !=0 ) {
+			tmp = m; 
+			m=n;
+			n = tmp % n;
+		}
+		if (n==1)
+			printf("%d \t",i);
+
+	}
+
+}//1 zadatak - Kolokvijum I - 2011
+
+
+
 void main() {
-	zad312();
+	zad111();
+	//zad312();
 	//zad212();
 	//zad112();
 	//zad313();
