@@ -244,7 +244,7 @@ void zad112 () {
 }// 1 zadatak - Kolokvijum I - 2012
 
 void main() {
-	//zad112();
+	zad112();
 	//zad313();
 	//zad213();
 	//zad113 ();
