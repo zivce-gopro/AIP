@@ -244,13 +244,126 @@ void zad112 () {
 
 }// 1 zadatak - Kolokvijum I - 2012
 void zad212 () {
-	
+	int N,i,obA,obB,obC;
+	float x,y;
+	printf("Unesi broj tacaka\n");
+	scanf("%d",&N);
+	for (i=0;i<N;i++) {
+		scanf("%f %f",&x,&y);
+		obA = (x-2)*(x-2) + (y-2)*(y-2) < 1 ;
+		obB = (x>0) && (y<2*x-2) && (y<6-2*x);
+		obC = obA && obB;
+
+		printf("R. broj = %d, (x,y) = (%f,%f) Oblast = ",i+1,x,y);
+
+		if (obC) printf("C\n");
+		
+		else if (obB) printf("B\n");
+		
+		else if (obA) printf("A\n");
+
+		else printf ("*\n");
+	}//end_for
 
 
 }//2 zadatak - Kolokvijum I - 2012
+void zad312 () {
+	int n,i,a[30],p=1;
+	float avg,s=0;
+	printf("Duzina niza?\n");
+	scanf("%d",&n);
+	for (i=0;i<n;i++) {
+		scanf("%d",&a[i]);
+		s+=a[i];
+	} 
+	avg = s/n;
+	for (i=0;i<n;i++) 
+		if (a[i]>avg) {
+			p*=a[i];
+			
+	printf("Proizvod je = %d\n",p);
+		}
+	printf("%f\n",avg);
+
+}//3 zadatak - Kolokvijum I - 2012
+
+void zad111 () {
+	int x,i,m,n,tmp;
+	printf("Uneti broj x\n");
+	scanf("%d",&x);
+	for (i=2;i<101;i++) {
+		m=x;n=i;
+
+		while ( m % n !=0 ) {
+			tmp = m; 
+			m=n;
+			n = tmp % n;
+		}
+		if (n==1)
+			printf("%d \t",i);
+
+	}
+
+}//1 zadatak - Kolokvijum I - 2011
+
+void zad311 () {
+	int n,i,a[30],k,r,j;
+	printf("Duzina niza?\n");
+	scanf("%d",&n);
+	for (i=0;i<n;i++) {
+		scanf("%d",&a[i]);
+	} 
+
+	printf("Unesi broj k\n");
+	scanf("%d",&k);
+	// radi ali nestrukturno isprogramirano! 
+	/*	r=0;
+
+	for (i=r ; i<n ; i++) {
+		while (a[r] != k && r<n)
+
+			r++;
+		if (r==n) {
+		break;}
+		for (j=r; j<n-1 ; j++)
+			a[j] = a[j+1];
+		n--;
+		for (t=0;t<n;t++) 
+			printf("%d ", a[t]);
+		printf("\n");
+		*/
+	for (i=0;i<n;i++) {
+		if (a[i] == k) {
+			for (j=i;j<n-1;j++)
+				a[j] = a[j+1];
+			n--;
+			for (r=0;r<n;r++)
+				printf("%d ",a[r]);
+		printf("\n");
+		}
+	
+	}
+		}//3 zadatak - Kolokvijum I - 2011
+void zad110() {
+	int m=0,B=14,S=0;
+	while (m<100) {
+		if (B%7 == 0 && B%3 != 0 && B % 4 ==2){
+			printf("%d\t",B);
+			m++;
+			S+=B;B+=2;
+		}
+		else B+=2;
+	}
+	printf("Suma = %d", S);
+
+}// 1 zadatak - Kolokvijum I - 2010
 
 void main() {
-	zad212();
+	zad110();
+	//zad311();
+	//zad111();
+	//zad312();
+	//zad212();
 	//zad112();
 	//zad313();
 	//zad213();
