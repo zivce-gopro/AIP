@@ -174,6 +174,7 @@ void zad3315() {
 
 
 }//Svaki element koji je paran dodaje na prvi sledeci koji je neparan
+
 void zad113() {
 	int B,i;
 	for (B=100;B<1000;B++){
@@ -242,9 +243,14 @@ void zad112 () {
 	printf("Suma = %d, Brojeva = %d", S, p);
 
 }// 1 zadatak - Kolokvijum I - 2012
+void zad212 () {
+	
+
+
+}//2 zadatak - Kolokvijum I - 2012
 
 void main() {
-	zad112();
+	//zad112();
 	//zad313();
 	//zad213();
 	//zad113 ();
