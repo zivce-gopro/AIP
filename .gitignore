@@ -1,0 +1,11 @@
+Debug/
+wau.vcxproj
+wau.vcxproj.filters
+wau.vcxproj.user
+ blanketi.vcxproj
+        blanketi.vcxproj.filters
+        blanketi.vcxproj.user
+        blanketi_BACKUP_46372.c
+        blanketi_BASE_46372.c
+        blanketi_LOCAL_46372.c
+        blanketi_REMOTE_46372.c
