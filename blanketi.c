@@ -348,10 +348,10 @@ void zad110() {
 	int m=0,B=14,S=0;
 	while (m<100) {
 		if (B%7 == 0 && B%3 != 0 && B % 4 ==2){
-			printf("%d\t",B)
+			printf("%d\t",B);
 			m++;
 
-			m++;
+		
 			S+=B;B+=2;
 		}
 		else B+=2;
