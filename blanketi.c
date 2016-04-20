@@ -174,6 +174,7 @@ void zad3315() {
 
 
 }//Svaki element koji je paran dodaje na prvi sledeci koji je neparan
+
 void zad113() {
 	int B,i;
 	for (B=100;B<1000;B++){
@@ -242,8 +243,33 @@ void zad112 () {
 	printf("Suma = %d, Brojeva = %d", S, p);
 
 }// 1 zadatak - Kolokvijum I - 2012
+void zad212 () {
+	int N,i,obA,obB,obC;
+	float x,y;
+	printf("Unesi broj tacaka\n");
+	scanf("%d",&N);
+	for (i=0;i<N;i++) {
+		scanf("%f %f",&x,&y);
+		obA = (x-2)*(x-2) + (y-2)*(y-2) < 1 ;
+		obB = (x>0) && (y<2*x-2) && (y<6-2*x);
+		obC = obA && obB;
+
+		printf("R. broj = %d, (x,y) = (%f,%f) Oblast = ",i+1,x,y);
+
+		if (obC) printf("C\n");
+		
+		else if (obB) printf("B\n");
+		
+		else if (obA) printf("A\n");
+
+		else printf ("*\n");
+	}//end_for
+
+
+}//2 zadatak - Kolokvijum I - 2012
 
 void main() {
+	zad212();
 	//zad112();
 	//zad313();
 	//zad213();
