@@ -157,9 +157,43 @@ void zad4() {
 	}		
 }//zadatak 4 - matrice.pdf
 
+void zad5() {
+	int n,m,i,j,a[30][50],min=0,s=0,jmin=0;
+	printf("Uneti N,M\n");
+	scanf("%d %d",&n,&m);
+	printf("Uneti niz\n");	
+	for (i=0;i<n;i++)
+		for (j=0;j<m;j++)
+			scanf("%d",&a[i][j]);
+	printf("\n");
+
+	for(i=0;i<n;i++)
+		min += a[i][0];
+
+	for(j=0;j<m;j++){
+		for(i=0;i<n;i++)
+			s+=a[i][j];
+		if(s<min){
+			min=s;
+			jmin=j;
+		}
+	}
+
+	printf("Minimalna suma= %d Indeks kolone = %d",min,jmin);
+	printf("\n");
+
+	for (i=0;i<n;i++){
+		for (j=0;j<m;j++){
+			printf("%d ",a[i][j]);}
+		printf("\n");}
+
+
+}//zadatak 5 - matrice.pdf
+
 
 void main () {
-	zad4();
+	//zad5();
+	//zad4();
 	//zad3();
 	//zad2();
 	//zad1();
