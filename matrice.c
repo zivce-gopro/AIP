@@ -124,8 +124,43 @@ void zad3() {
 			printf("\n");}
 }//Zadatak 3 - matrice.pdf
 
+void zad4() {
+	int a[3][6] = {
+		{1,2,3,4,5,6},
+		{1,2,3,5,7,9},
+		{2,2,4,4,6,6}};
+	int p,i,j,b[30],k;
+
+	for (i=0;i<3;i++){
+		for (j=0;j<6;j++){ 
+			printf("%d ",a[i][j]);
+			}
+		printf("\n");}
+
+
+	printf("\n");
+	
+	for (i=0;i<3;i++){
+		k=0;
+		for (j=5;j>=0;j--){
+			b[k] = a[i][j];
+			k++;	
+		}
+
+		k=0;
+		for (j=0;j<6;j++){
+			a[i][j] = b[k];
+			k++;
+			printf("%d ",a[i][j]);
+		}
+		printf("\n");
+	}		
+}//zadatak 4 - matrice.pdf
+
+
 void main () {
-	zad3();
+	zad4();
+	//zad3();
 	//zad2();
 	//zad1();
 }
