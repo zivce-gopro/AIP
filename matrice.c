@@ -47,6 +47,7 @@ void zad2 () {
 	for (i=0;i<n;i++)
 		for (j=0;j<n;j++)
 			if ((a[i][j]>max) && (i>j)) {
+				max = a[i][j];
 				imax = i;
 				jmax = j;
 			}//nadji imax i jmax
@@ -55,6 +56,7 @@ void zad2 () {
 	for (i=0;i<n;i++)
 		for (j=0;j<n;j++)
 			if ((a[i][j]<min) && (i<j)) {
+				min = a[i][j];
 				imin = i;
 				jmin = j;
 			}//nadji imin i jmin 
@@ -72,8 +74,49 @@ void zad2 () {
 
 }//Zadatak 2 - matrice.pdf
 
+void zad3() {
+	int n,m,i,j,a[100][200],max,min,imin,imax,p;
+	printf("Uneti N,M\n");
+	scanf("%d %d",&n,&m);
+	printf("Uneti niz\n");	
+	for (i=0;i<n;i++)
+		for (j=0;j<m;j++)
+			scanf("%d",&a[i][j]);
+	printf("\n");
+	for (i=0;i<n;i++){
+			for (j=0;j<m;j++){
+				printf("%d ",a[i][j]);}
+			printf("\n");}
+	printf("\n");
+
+	max = a[0][0];
+	for (i=0;i<n;i++)
+			for (j=0;j<m;j++){
+				if (a[i][j] > max)
+					imax = i;}
+
+			
+	min = a[0][0];
+	for (i=0;i<n;i++)
+			for (j=0;j<m;j++){
+				if (a[i][j] < min)
+					imin = i;}
+			//zamena
+		for (i=0;i<n;i++)
+			for (j=0;j<m;j++){
+				p = a[imin][j];
+				a[imin][j] = a[imax][j];
+				a[imax][j] = p;
+			}
+				
+	for (i=0;i<n;i++){
+			for (j=0;j<m;j++){
+				printf("%d ",a[i][j]);}
+			printf("\n");}
+}//Zadatak 3 - matrice.pdf
 
 void main () {
-	//zad2();
+	//zad3();
+	zad2();
 	//zad1();
 }
