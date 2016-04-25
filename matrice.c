@@ -247,9 +247,61 @@ void zad6() {
 
 }//zadatak 6 - matrice.pdf
 
+void zad7() {
+	int a[5][5] = {
+	1,2,3,4,5,
+	6, 7, 8, 9, 1, 
+	2, 3, 4, 5, 6,
+	7, 8, 9, 1, 2,
+	3, 4, 5, 6, 7
+	};
+	int B[5][5], C[5][5],p,i,j;
+
+	for (i=0;i<5;i++){
+		for(j=0;j<5;j++)
+			printf("%d ",a[i][j]);
+		printf("\n");
+	}
+
+	printf("\n");
+
+	for (i=0;i<5;i++){
+		for(j=0;j<5;j++)
+			B[i][j] = a[i][j];
+	}
+
+	for (i=1;i<5;i++){
+		for(j=0;j<i;j++){
+				p=B[i][j];
+				B[i][j] = B[j][i];
+				B[j][i] = p;
+			} // transponovanje 
+	}
+	for (i=0;i<5;i++){
+		for(j=0;j<5;j++)
+			printf("%d ",B[i][j]);
+		printf("\n");
+	}
+
+	printf("\n");
+
+	for (i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			C[i][j] = a[i][j] - 2 * B[i][j];
+			printf("%d ",C[i][j]);
+		}
+		printf("\n");
+	}
+
+		
+		
+	
+}//zadatak 7 - matrice.pdf
 
 void main () {
-	zad6();
+	
+	zad7();
+	//zad6();
 	//zad5();
 	//zad4();
 	//zad3();
