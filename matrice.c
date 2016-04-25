@@ -190,8 +190,66 @@ void zad5() {
 
 }//zadatak 5 - matrice.pdf
 
+void zad6() {
+	int a[5][5] = {
+	1,2,3,4,5,
+	6,3,4,5,6,
+	1,1,23,4,6,
+	12,3,4,5,6,
+	2,3,5,6,1
+	
+	};
+
+	int P[30],p,i,j,k,r,q,m;
+
+
+	
+	printf("Unesi K\n");
+	scanf("%d",&k);
+
+	for (i=0;i<5;i++){
+		for (j=0;j<5;j++)
+			printf("%d ",a[i][j]);
+		printf("\n");
+	}
+
+	
+
+	for (i=0;i<5;i++){
+		q=0;
+		for(j=0;j<5;j++)
+			if(j>i){
+				P[q] = a[i][j];
+				q++;
+			}//formiraj niz elemenata iznad glavne
+
+		for(m=0;m<k;m++){
+			p= P[q-1];
+			for(r=q-1;r>0;r--)
+				P[r] = P[r-1];
+			P[0] = p;
+		}//rotiranje k puta
+
+		q=0;
+		for(j=0;j<5;j++)
+			if(j>i){
+				a[i][j] = P[q];
+				q++;
+			}
+	}//endfori
+
+	printf("\n");
+	for (i=0;i<5;i++){
+		for (j=0;j<5;j++)
+			printf("%d ",a[i][j]);
+		printf("\n");
+	}
+
+}//zadatak 6 - matrice.pdf
+
 
 void main () {
+	zad6();
 	//zad5();
 	//zad4();
 	//zad3();
