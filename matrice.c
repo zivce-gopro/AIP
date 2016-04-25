@@ -298,9 +298,42 @@ void zad7() {
 	
 }//zadatak 7 - matrice.pdf
 
-void main () {
+void zad8() {
+	int i,j,m,n,a[30][30];
+
+	printf("Uneti N,M\n");
+	scanf("%d %d",&n,&m);
+	printf("Uneti niz\n");	
+	for (i=0;i<n;i++)
+		for (j=0;j<m;j++)
+			scanf("%d",&a[i][j]);
+	printf("\n");
+
+	printf("Vrste gde su elementi sortirani neopadajuce:\n");
+
+	for(i=0;i<n;i++) {
+		j=0;
+		
+		while(a[i][j+1] >= a[i][j] && j<m-1)
+			j++;
+		if(j == m-1) printf("%d ",i);
+	}
+
+	printf("\n");
+
+	for (i=0;i<n;i++){
+		for (j=0;j<m;j++)
+			printf("%d ",a[i][j]);
+	printf("\n");}
 	
-	zad7();
+
+
+}//zadatak 8 - matrice.pdf
+
+
+void main () {
+	zad8();
+	//zad7();
 	//zad6();
 	//zad5();
 	//zad4();
