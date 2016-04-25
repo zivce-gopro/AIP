@@ -330,9 +330,53 @@ void zad8() {
 
 }//zadatak 8 - matrice.pdf
 
+void zad9() {
+	int i,j,A[100][100],n,B[50],p,k;
+	printf("Uneti N\n");
+	scanf("%d",&n);
+	for (i=0;i<n;i++)
+		for (j=0;j<n;j++)
+			scanf("%d",&A[i][j]);
+
+	printf("\n");
+
+	
+	for (i=0;i<n;i++) {
+		for (j=0;j<n;j++)
+			printf("%d ",A[i][j]);
+	printf("\n");}
+	k=0;
+	
+		for (j=0;j<n;j++){
+			B[k] = A[n-1-j][j];
+			k++;
+		}
+
+	for(i=0;i<n;i++)
+		for(j=i+1;j<n;j++)
+			if(B[i]<B[j]) {
+				p=B[i];
+				B[i] = B[j];
+				B[j] = p;
+			}
+	k=0;
+		for (j=0;j<n;j++){
+			A[n-1-j][j] = B[k];
+			k++;
+		}
+	
+	printf("\n");
+
+	for (i=0;i<n;i++) {
+		for (j=0;j<n;j++)
+			printf("%d ",A[i][j]);
+	printf("\n");}
+
+}//zadatak 9 -matrice.pdf
 
 void main () {
-	zad8();
+	zad9();
+	//zad8();
 	//zad7();
 	//zad6();
 	//zad5();
