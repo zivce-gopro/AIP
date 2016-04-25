@@ -374,8 +374,38 @@ void zad9() {
 
 }//zadatak 9 -matrice.pdf
 
+void zad10() {
+	int i,j,A[4][4] = {
+	1,2,3,4,
+	5,6,7,8,
+	9,10,11,12,
+	13,14,15,16
+	},B[30];
+
+	for(i=0;i<4;i++){
+		for(j=0;j<4;j++)
+			printf("%d ",A[i][j]);
+	printf("\n");
+	}
+
+	i=0;
+	for(j=0;j<4;j++){
+		B[i] = A[j][j] + A[3-j][j];
+		i++;
+	}
+
+	printf("Niz B = \n");
+	for(j=0;j<i;j++)
+		printf("%d ",B[j]);
+
+
+
+
+}//zadatak 10 - matrice.pdf
+
 void main () {
-	zad9();
+	//zad10();
+	//zad9();
 	//zad8();
 	//zad7();
 	//zad6();
