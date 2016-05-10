@@ -13,6 +13,18 @@ void zamena(int *a,int *b) {
 	*b=pom;
 }
 
+int bin2dec(int B[], int N) {
+	
+	int r=1,M=0,i;
+	
+	for(i=0;i<N;i++) {
+		M+= B[i] * r;
+		r*=2;
+	}
+
+	return M;
+
+}
 
 void main() {
 	/*
@@ -34,6 +46,17 @@ void main() {
 	zamena(&x,&y);
 	zamena(&y,&z);
 	printf("%d %d %d\n",x,y,z);*/ //drugi_zad_main
+
+
+	int N,i,B[40];
+	printf("broj cifara?\n");
+	scanf("%d",&N);
+	
+	for(i=0;i<N;i++){
+		scanf("%d",&B[i]);	
+	}
+
+	printf("%d\n",bin2dec(B,N));
 
 
 
