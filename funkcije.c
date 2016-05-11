@@ -42,7 +42,24 @@ void minimax(int *X, int N, int *imax,int *imin) {
 			*imin = i;
 		}
 
+}//cetvrti_zad_f-ja
+
+void delioci(int B, int *X, int *N)
+{
+	int i,k;
+	k=0;
+
+	for(i=1;i<=B;i++){
+		if(B % i == 0) {
+			X[k] = i;
+			k++;
+			*N=k;
+		}	
+	
+	}
+
 }
+
 
 void main() {
 	/*
@@ -77,7 +94,7 @@ void main() {
 	printf("%d\n",bin2dec(B,N)); */ //treci_zad_main
 
 
-	int N,i,B[40],imx,imn;
+	/*int N,i,B[40],imx,imn;
 	printf("Duzina niza?\n");
 	scanf("%d",&N);
 	imx=0;imn=0;
@@ -88,6 +105,12 @@ void main() {
 	minimax(B,N,&imx,&imn);
 
 	printf("imin = %d imax = %d\n",imn,imx);
+	*/ //cetvrti_zad_main
+	int B,M=0,A[50],i;
+	scanf("%d",&B);
+	delioci(B,A,&M);
+	for(i=0;i<M;i++)
+		printf("%d ",A[i]);
 
 	}
 
