@@ -1,4 +1,5 @@
 #include "stdio.h"
+
 int prost(int A) {
 	int k=2,p=0;
 	while(A%k!=0 && k<A) k++;
@@ -26,6 +27,23 @@ int bin2dec(int B[], int N) {
 
 }
 
+
+void minimax(int *X, int N, int *imax,int *imin) {
+	int min=X[0],max=X[0],i;
+	for(i=0;i<N;i++)
+		if(max<X[i]){
+			max= X[i];
+			*imax = i;
+		}
+
+	for(i=0;i<N;i++)
+		if(min>X[i]){
+			min = X[i];
+			*imin = i;
+		}
+
+}
+
 void main() {
 	/*
 	int N,x,b=0,i;
@@ -48,7 +66,7 @@ void main() {
 	printf("%d %d %d\n",x,y,z);*/ //drugi_zad_main
 
 
-	int N,i,B[40];
+	/* int N,i,B[40];
 	printf("broj cifara?\n");
 	scanf("%d",&N);
 	
@@ -56,10 +74,20 @@ void main() {
 		scanf("%d",&B[i]);	
 	}
 
-	printf("%d\n",bin2dec(B,N));
+	printf("%d\n",bin2dec(B,N)); */ //treci_zad_main
 
 
+	int N,i,B[40],imx,imn;
+	printf("Duzina niza?\n");
+	scanf("%d",&N);
+	imx=0;imn=0;
 
+	for(i=0;i<N;i++){
+		scanf("%d",&B[i]);	
+	}
+	minimax(B,N,&imx,&imn);
+
+	printf("imin = %d imax = %d\n",imn,imx);
 
 	}
 
