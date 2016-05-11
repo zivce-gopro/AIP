@@ -27,7 +27,6 @@ int bin2dec(int B[], int N) {
 
 }
 
-
 void minimax(int *X, int N, int *imax,int *imin) {
 	int min=X[0],max=X[0],i;
 	for(i=0;i<N;i++)
@@ -59,6 +58,35 @@ void delioci(int B, int *X, int *N)
 	}
 
 }
+
+
+void sortiranje(int *X, int S, int N) {
+	int i,j,pom;
+	if(S<0) {
+		for(i=0;i<N;i++)
+			for(j=0;j<N;j++)
+				if(X[i]<=X[j]){
+					pom = X[i];
+					X[i] = X[j];
+					X[j] = pom;}
+				
+				}
+	else {
+			
+		for(i=0;i<N;i++)
+			for(j=0;j<N;j++)
+				if(X[i]>=X[j]){
+					pom = X[i];
+					X[i] = X[j];
+					X[j] = pom;}
+					
+				
+				
+				}
+	
+	}
+
+
 
 
 void main() {
@@ -106,11 +134,49 @@ void main() {
 
 	printf("imin = %d imax = %d\n",imn,imx);
 	*/ //cetvrti_zad_main
-	int B,M=0,A[50],i;
+	/*int B,M=0,A[50],i;
 	scanf("%d",&B);
 	delioci(B,A,&M);
 	for(i=0;i<M;i++)
+		printf("%d ",A[i]);*/ //peti_zad_main
+
+	int N,i,A[50],B[50],S;
+
+	printf("duzina niza?");
+	scanf("%d", &N);
+	printf("unesi clanove");
+	for(i=0;i<N;i++){
+		scanf("%d",&A[i]);
+		B[i] = A[i];
+	}
+
+	for(i=0;i<N;i++)
+		printf("%d ",B[i]);
+
+	printf("\n");
+
+	S=-1;
+
+	sortiranje(A,S,N);
+
+	for(i=0;i<N;i++)
 		printf("%d ",A[i]);
+	printf("\n");
+
+	S=1;
+
+	for(i=0;i<N;i++)
+		printf("%d ",B[i]);
+
+	printf("\n");
+
+	
+	sortiranje(A,S,N);
+
+	for(i=0;i<N;i++)
+		printf("%d ",A[i]);
+	printf("\n");
+	
 
 	}
 
