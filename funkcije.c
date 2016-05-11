@@ -98,6 +98,15 @@ void border(int M[50][50], int N, int S) {
 
 }
 
+int suma(int A[][30], int N){
+	int S=0,i,j;
+	for(i=0;i<N;i++)
+		for(j=0;j<N;j++)
+			if(i+j>N-1)
+				S+=A[i][j];
+	return S;
+}
+
 void main() {
 	/*
 	int N,x,b=0,i;
@@ -188,7 +197,7 @@ void main() {
 	*/ //sesti_zad_main
 
 
-	int i,j,N,M;
+	/*int i,j,N,M;
 	int A[50][50];
 	printf("Uneti N, M\n ");
 	scanf("%d %d",&N,&M);
@@ -197,9 +206,47 @@ void main() {
 		for(j=0;j<M;j++)
 			scanf("%d",&A[i][j]);
 	border(A,N,M);
+	*/ //sedmi_zad_main
+	
+	int N,M,i,j,B[30][30],C[30][30],suma1,suma2;
+
+	printf("Duzina B\n");
+	scanf("%d",&N);
+	
+	printf("Unesi B\n");
+	for(i=0;i<N;i++)
+		for(j=0;j<N;j++)
+			scanf("%d",&B[i][j]);
 
 
+	printf("Duzina C\n");
+	scanf("%d",&M);
+
+	
+	printf("Unesi C\n");
+	for(i=0;i<M;i++)
+		for(j=0;j<M;j++)
+			scanf("%d",&C[i][j]);
+	
+	suma1= suma(B,N);
+	
+	suma2= suma(C,N);
+
+	if(suma1 > suma2){
+	
+	for(i=0;i<N;i++) {
+		for(j=0;j<N;j++)
+			printf("%d ",B[i][j]);
+		printf("\n");}
+	
+	} else {
+		for(i=0;i<M;i++) {
+			for(j=0;j<M;j++)
+				printf("%d ",C[i][j]);
+			printf("\n");}
+	
 	}
+}
 
 
 
