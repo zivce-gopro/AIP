@@ -86,8 +86,17 @@ void sortiranje(int *X, int S, int N) {
 	
 	}
 
+void border(int M[50][50], int N, int S) {
+	int i,j;
+	
+	for(i=0;i<N;i++){
+		printf("|");
+		for(j=0;j<S-1;j++)
+			printf("%d ",M[i][j]);
+		printf("%d",M[i][S-1]);
+		printf("|\n");}
 
-
+}
 
 void main() {
 	/*
@@ -140,7 +149,7 @@ void main() {
 	for(i=0;i<M;i++)
 		printf("%d ",A[i]);*/ //peti_zad_main
 
-	int N,i,A[50],B[50],S;
+	/*int N,i,A[50],B[50],S;
 
 	printf("duzina niza?");
 	scanf("%d", &N);
@@ -176,7 +185,19 @@ void main() {
 	for(i=0;i<N;i++)
 		printf("%d ",A[i]);
 	printf("\n");
-	
+	*/ //sesti_zad_main
+
+
+	int i,j,N,M;
+	int A[50][50];
+	printf("Uneti N, M\n ");
+	scanf("%d %d",&N,&M);
+
+	for(i=0;i<N;i++)
+		for(j=0;j<M;j++)
+			scanf("%d",&A[i][j]);
+	border(A,N,M);
+
 
 	}
 
