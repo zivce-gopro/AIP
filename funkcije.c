@@ -208,7 +208,7 @@ void main() {
 	border(A,N,M);
 	*/ //sedmi_zad_main
 	
-	int N,M,i,j,B[30][30],C[30][30],suma1,suma2;
+	/*int N,M,i,j,B[30][30],C[30][30],suma1,suma2;
 
 	printf("Duzina B\n");
 	scanf("%d",&N);
@@ -245,7 +245,9 @@ void main() {
 				printf("%d ",C[i][j]);
 			printf("\n");}
 	
-	}
+	} */ //deveti_zad_main
+
+	
 }
 
 
