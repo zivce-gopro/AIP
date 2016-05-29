@@ -35,7 +35,7 @@ void main() {
 	} //end_while
 	fclose(f); //drugi zad 
 	*/
-	int k,i,b,s,r,j,m=0; 
+	/* int k,i,b,s,r,j,m=0; 
 	char ra[101],sout[51] = " ",p;
 	printf("unesi rec\n");
 	gets(ra);
@@ -57,5 +57,8 @@ void main() {
 
 	for(i=0;i<m;i++)
 		printf("%c\t",sout[i]);
+	//treci zad */
+
+
 
 	} 
