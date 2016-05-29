@@ -58,7 +58,21 @@ void main() {
 	for(i=0;i<m;i++)
 		printf("%c\t",sout[i]);
 	//treci zad */
+	/* char S[51],M[51]= " ";
+	int i,j,k,r,p;
+	printf("unesi recenicu\n");
+	gets(S);
+	i=strlen(S);
+	p=strlen(S);
+	while (i>0 && S[i] != ' ') 	i--;
 
-
+	k=0;
+	for(r=i+1;r<p;r++){
+		M[k]=S[r];
+		k++;
+	}
+	M[k]= ' ';
+	strncat(M,S,i);
+	puts(M); //cetvrti_zad */
 
 	} 
