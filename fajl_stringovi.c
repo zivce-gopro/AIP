@@ -1,16 +1,13 @@
 #include "stdio.h"
 #include "string.h"
 
-int elem(char p, char* S){
+int elem(char p, char S[]){
 	int b=0,i=0;
 	while(i<strlen(S)){
 		if(p==S[i]) b=1;
 		i++;
 	}
-	
 	return b;
-	
-
 }
 
 void main() {
@@ -38,8 +35,8 @@ void main() {
 	} //end_while
 	fclose(f); //drugi zad 
 	*/
-	int k,i,b,s,r,j;
-	char ra[101],sout[51],p;
+	int k,i,b,s,r,j,m=0; 
+	char ra[101],sout[51] = " ",p;
 	printf("unesi rec\n");
 	gets(ra);
 	printf("unesi k\n");
@@ -47,14 +44,18 @@ void main() {
 	i=0;
 	while(i<strlen(ra)){
 	b=1;p=ra[i];
-	if(!elem(p,sout)){
-		for(j=i+1;j<strlen(ra);j++)
-			if(p==ra[j]) b++;
-	if(b>=k) strcat(p,sout);
+	if(elem(p,sout) == 0){
+			for(j=i+1;j<strlen(ra);j++)
+				if(p==ra[j]) b++;
+		}//end_if
+	if(b>=k) {
+		sout[m] = p;
+		m++;
+	}
 	i++;
-	
-	}//end_while	
-	puts(sout);
+	}//end_while
 
+	for(i=0;i<m;i++)
+		printf("%c\t",sout[i]);
 
-}
+	} 
