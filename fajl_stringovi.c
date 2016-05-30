@@ -25,6 +25,9 @@ char* nadovezi(char S1[],char S2[]){
 	return SR;
 }
 
+
+
+
 void main() {
 	/* float S=0,avg;
 	int i=0,b;
@@ -134,7 +137,4 @@ void main() {
 	gets(A);gets(B);
 	C = nadovezi(A,B);
 	puts(C);
-	strcat(A,B);
-	puts(A);
-
 }
