@@ -1,5 +1,7 @@
 #include "stdio.h"
 #include "string.h"
+#include "malloc.h"
+#include "stdlib.h"
 
 int elem(char p, char S[]){
 	int b=0,i=0;
@@ -8,6 +10,19 @@ int elem(char p, char S[]){
 		i++;
 	}
 	return b;
+}
+
+
+char* nadovezi(char S1[],char S2[]){
+	int i=0,p=strlen(S1),m=strlen(S2);
+	char *SR;
+	SR = (char *)calloc(p+m,sizeof(char));
+	strncpy(SR,S1,p);
+
+	while(i<=m)
+		SR[p+i] = S2[i++];
+	
+	return SR;
 }
 
 void main() {
@@ -88,8 +103,8 @@ void main() {
 	}
 	printf("%d",count);
 	*/
-
-	/* int b=1,d=0,r=1;
+	/*
+	 int b=1,d=0,r=1;
 	FILE *f;
 	f = fopen("binarne-cifre.txt","r");
 	while(!feof(f)){
@@ -98,10 +113,10 @@ void main() {
 		r*=2;
 	}
 	printf("%d",d);
-	fclose(f);//doda 1 na kraj fajla?
+	fclose(f);//blanko na kraju prob
 	//sesti_zad
 	*/
-	int p=0;
+	/*int p=0;
 	char S[101],rec[51];
 	FILE *f = fopen("tekst.txt","r");
 	scanf("%s",&rec);
@@ -111,8 +126,15 @@ void main() {
 	}
 	if(p) printf("Y");
 	else printf("N");
-
-
-
+	//sedmi_zad
+	
+	*/
+	char A[2001],B[2001];
+	char* C;char* M;
+	gets(A);gets(B);
+	C = nadovezi(A,B);
+	puts(C);
+	strcat(A,B);
+	puts(A);
 
 }
