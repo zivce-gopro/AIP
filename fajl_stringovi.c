@@ -35,7 +35,7 @@ void main() {
 	} //end_while
 	fclose(f); //drugi zad 
 	*/
-	/* int k,i,b,s,r,j,m=0; 
+	 /*int k,i,b,s,r,j,m=0; 
 	char ra[101],sout[51] = " ",p;
 	printf("unesi rec\n");
 	gets(ra);
@@ -57,7 +57,7 @@ void main() {
 
 	for(i=0;i<m;i++)
 		printf("%c\t",sout[i]);
-	//treci zad */
+	*/
 	/* char S[51],M[51]= " ";
 	int i,j,k,r,p;
 	printf("unesi recenicu\n");
@@ -75,4 +75,20 @@ void main() {
 	strncat(M,S,i);
 	puts(M); //cetvrti_zad */
 
-	} 
+
+	/*
+	int count = 0;
+	char R[51],rc[21];
+	const char *tmp = R;
+	gets(R);printf("\n");gets(rc);
+	while(tmp = strstr(tmp, rc))
+	{
+	   count++;
+	   tmp++;
+	}
+	printf("%d",count);
+	*/
+
+
+
+}
