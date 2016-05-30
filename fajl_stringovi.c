@@ -146,12 +146,45 @@ void main() {
 	C = nadoveziI(A,B);
 	puts(C);*/
 
-	char s[1001];
+	/*char s[1001];
 	int i;
 	gets(s);
 	for(i=0;i<strlen(s);i++)
 		if(s[i] >= 'A' && s[i] <= 'Z')
 			s[i] += 'a' - 'A';
 	puts(s);
+	*/ //deveti_zad
+	char S[101];char *A;
+	const char r= '.';
+	char* po;
+	int m,b=0,i,j,t;
+	FILE *fi = fopen("recenice.txt", "r");
+	FILE *fo = fopen("sadrze.txt","w");
+
+	scanf("%d",&m);
+
+	while (!feof(fi)){
+		fgets(S,100,fi);
+		i=0;b=0;
+		while(S[i]!='\0'){
+			t=0;
+			while(S[i++]!='.') t++; //izbroj karaktere do tacke
+		
+
+			if(t>=m)
+				for(j=b;j<=b+t;j++)
+					fputc(S[j],fo);				
+				
+			//end_upisa
+
+		b+=t+1;//da predje tacku
+		
+		}
+
 	
+	}//end_while
+
+	fclose(fi);fclose(fo);
+	//sadrze.txt formiran za m=10 
+
 }
