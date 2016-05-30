@@ -89,6 +89,30 @@ void main() {
 	printf("%d",count);
 	*/
 
+	/* int b=1,d=0,r=1;
+	FILE *f;
+	f = fopen("binarne-cifre.txt","r");
+	while(!feof(f)){
+		fscanf(f,"%d",&b);
+		d+=b*r;
+		r*=2;
+	}
+	printf("%d",d);
+	fclose(f);//doda 1 na kraj fajla?
+	//sesti_zad
+	*/
+	int p=0;
+	char S[101],rec[51];
+	FILE *f = fopen("tekst.txt","r");
+	scanf("%s",&rec);
+	while(!feof(f)){
+		fgets(S,100,f);
+		if(strstr(S,rec)) p=1;
+	}
+	if(p) printf("Y");
+	else printf("N");
+
+
 
 
 }
