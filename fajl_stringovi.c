@@ -13,19 +13,27 @@ int elem(char p, char S[]){
 }
 
 
-char* nadovezi(char S1[],char S2[]){
+char* nadoveziI(char S1[],char S2[]){
 	int i=0,p=strlen(S1),m=strlen(S2);
 	char *SR;
 	SR = (char *)calloc(p+m,sizeof(char));
 	strncpy(SR,S1,p);
-
 	while(i<=m)
 		SR[p+i] = S2[i++];
 	
 	return SR;
 }
 
+/*
+char* nadoveziII(char S1[], char S2[]){
+	int m=strlen(S1),p=strlen(S2),i,j;
+	S1 =(char *)malloc(m*sizeof(char));
+	S1 = (char *)realloc(S1,(m+p)*sizeof(char));
+	for(i=m,j=0;i<p;i++,j++) S1[i] = S2[j];
 
+	return S1;
+}
+*/
 
 
 void main() {
@@ -132,9 +140,18 @@ void main() {
 	//sedmi_zad
 	
 	*/
-	char A[2001],B[2001];
+	/*char A[2001],B[2001];
 	char* C;char* M;
 	gets(A);gets(B);
-	C = nadovezi(A,B);
-	puts(C);
+	C = nadoveziI(A,B);
+	puts(C);*/
+
+	char s[1001];
+	int i;
+	gets(s);
+	for(i=0;i<strlen(s);i++)
+		if(s[i] >= 'A' && s[i] <= 'Z')
+			s[i] += 'a' - 'A';
+	puts(s);
+	
 }
